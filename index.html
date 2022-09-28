@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+    </head>
+    <body>
+        <script>
+            let params = new URLSearchParams({
+                access_key: '5b1839edf7b9d9bf702375d1cb1260f5',
+                query: 'New York',
+                units: 'f'
+            });
+            fetch(`http://api.weatherstack.com/current?${params}`).then(res=> res.json()).then(console.log); 
+        </script>
+    </body>
+    <div class="api">
+        <div class="container">Register for API key to run. <a target="_blank" href="https://home.openweathermap.org/users/sign_up">Get yours here for free!</a>
+        </div>
+      </div>
+      <section class="top-banner">
+        <div class="container">
+          <h1 class="heading">Simple Weather App</h1>
+          <form>
+            <input type="text" placeholder="Search for a city" autofocus>
+            <button type="submit">SUBMIT</button>
+            <span class="msg"></span>
+          </form>
+        </div>
+      </section>
+      <section class="ajax-section">
+        <div class="container">
+          <ul class="cities"></ul>
+        </div>
+      </section>
+      <footer class="page-footer">
+        
+      </footer>
+</html>
